@@ -22,12 +22,26 @@ body {
 }
 
 .title {
-    font-size: 3rem;
-    margin: 6vh;
+    font-size: 2rem;
+    margin: 5vh auto;
     border: 7px dashed rgb(1, 17, 160);
-    border-radius: 20px;
-    padding: 1vh 5vw;
+    border-radius: 25px;
+    padding: 2vh 4vw;
+    text-align: center;
+    background-color: rgb(240, 248, 255);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
+
+.title:hover {
+    transform: scale(1.05);
+    /* Slight zoom-in effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    /* Enhance shadow on hover */
+}
+
 
 .cards {
     display: flex;
