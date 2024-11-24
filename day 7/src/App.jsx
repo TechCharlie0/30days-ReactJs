@@ -55,7 +55,6 @@ function App() {
         <h1 className="text-2xl font-bold text-cyan-400 text-center mb-6">
           User Information Form
         </h1>
-        {/* Notification Banner */}
         {notification && (
           <div
             className={`mb-4 p-3 rounded-lg ${
