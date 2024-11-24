@@ -17,8 +17,8 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen ">
-      <div className="bg-white shadow-2xl rounded-xl p-8 w-full max-w-md transform hover:scale-105 transition duration-500">
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="bg-gradient-to-r from-purple-500 to-pink-500 shadow-2xl rounded-xl p-8 w-full max-w-md transform hover:scale-105 transition duration-500">
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-6">
           Welcome Back
         </h2>
@@ -51,10 +51,11 @@ const LoginForm = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg font-bold shadow-md hover:opacity-90 transition"
+            className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg font-bold shadow-[10px_10px_20px_rgba(131,90,220,3)] hover:opacity-90 transition transform hover:scale-105"
           >
             Login
           </button>
+
         </form>
         <p className="mt-6 text-sm text-gray-600 text-center">
           Don’t have an account?{" "}
