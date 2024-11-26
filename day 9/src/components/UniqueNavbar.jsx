@@ -104,14 +104,15 @@ const UniqueNavbar = () => {
             href="#features"
             className="block px-4 py-2 text-sm hover:bg-purple-500 transition duration-300"
           >
-            Features
-          </a>
+              About
+              </a>
           <a
             href="#pricing"
             className="block px-4 py-2 text-sm hover:bg-purple-500 transition duration-300"
           >
-            Pricing
-          </a>
+              Work
+              </a>
+              
           <a
             href="#contact"
             className="block px-4 py-2 text-sm hover:bg-purple-500 transition duration-300"
