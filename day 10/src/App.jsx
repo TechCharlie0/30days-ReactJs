@@ -1,17 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import Form from "./components/Form";
+import Letter from "./components/Letter";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [letterData, setLetterData] = useState({
+    firstName: "",
+    lastName: "",
+    message: "",
+  });
 
   return (
-    <div>
-      <h1>hello world</h1>
-      <p>My name is isha</p>
+    <div className="min-h-screen bg-pink-50 p-6 flex flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold text-pink-600 mb-8">Generate Letter</h1>
+      <Form setLetterData={setLetterData} />
+      <Letter letterData={letterData} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
