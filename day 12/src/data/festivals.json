@@ -1,18 +1,18 @@
 [
     {
-      "name": "Dashain",
-      "date": "Mansir 1",
-      "description": "Dashain is the biggest festival in Nepal, celebrating the victory of good over evil."
+      "date": "2079-10-01",
+      "name": "Nepali New Year",
+      "description": "Celebration of Nepali New Year."
     },
     {
-      "name": "Tihar",
-      "date": "Kartik 15",
-      "description": "Tihar, also known as Deepawali, is the festival of lights and celebrates the bond between brothers and sisters."
+      "date": "2079-04-15",
+      "name": "Rath Yatra",
+      "description": "A festival where the Lord Jagannath's chariot is pulled."
     },
     {
-      "name": "Holi",
-      "date": "Falgun 7",
-      "description": "Holi is the festival of colors, celebrated with joy and excitement across Nepal."
+      "date": "2080-01-01",
+      "name": "Maghe Sankranti",
+      "description": "Festival marking the start of the harvesting season."
     }
   ]
   

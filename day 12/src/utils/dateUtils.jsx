@@ -1,20 +1,17 @@
 // src/utils/dateUtils.js
+import NepaliDate from 'nepali-date';
 
-// Placeholder function to simulate Nepali date conversion
 export const getNepaliDate = (gregorianDate) => {
-    // Array of Nepali months
-    const monthNames = [
-      "Baisakh", "Jestha", "Ashadh", "Shrawan", "Bhadra", "Ashwin", 
-      "Kartika", "Mangsir", "Poush", "Magh", "Falgun", "Chaitra"
-    ];
-    
-    // Generate a random Nepali month from the list
-    const nepaliMonth = monthNames[Math.floor(Math.random() * 12)];
-    
-    // Generate a random day between 1 and 30
-    const nepaliDay = Math.floor(Math.random() * 30) + 1;
-  
-    // Return the simulated Nepali date (e.g., "Mangsir 1")
-    return `${nepaliMonth} ${nepaliDay}`;
-  };
-  
+  const nepaliDate = new NepaliDate(gregorianDate);
+  return nepaliDate.format("YYYY-MM-DD"); // Format as Nepali date (e.g., "2079-09-25")
+};
+
+export const getNepaliMonth = (gregorianDate) => {
+  const nepaliDate = new NepaliDate(gregorianDate);
+  return nepaliDate.format("MMMM YYYY"); // Format as Nepali month and year (e.g., "Mansir 2079")
+};
+
+export const getTodayNepaliDate = () => {
+  const nepaliDate = new NepaliDate();
+  return nepaliDate.format("YYYY-MM-DD"); // Get today's Nepali date
+};
