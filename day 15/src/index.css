@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add custom styles if needed */
+body {
+    font-family: 'Dancing Script', cursive;
+}
