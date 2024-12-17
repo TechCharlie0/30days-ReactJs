@@ -1,45 +1,34 @@
-
 import React, { useState } from "react";
 
-function Letter() {
-  const [opened, setOpened] = useState(false);
+const Letter = () => {
+  const [isOpened, setIsOpened] = useState(false);
 
   return (
-    <div className="w-11/12 md:w-3/4 lg:w-1/2 bg-white p-8 rounded-lg shadow-2xl relative">
-      {!opened ? (
-        <div
-          onClick={() => setOpened(true)}
-          className="cursor-pointer text-center"
-        >
-          <div className="text-2xl font-serif text-gray-700">
-            💌 Open Your Letter
-          </div>
-          <div className="mt-6 text-center text-sm text-gray-500">
-            Click to reveal
-          </div>
+    <div className="bg-white w-11/12 md:w-2/3 lg:w-1/2 p-6 rounded-lg shadow-2xl text-center">
+      {!isOpened ? (
+        <div>
+          <button
+            onClick={() => setIsOpened(true)}
+            className="bg-pink-400 text-white px-4 py-2 rounded-full shadow-md hover:bg-pink-500 transition duration-300"
+          >
+            💌 Open the Love Letter
+          </button>
+          <p className="mt-4 text-gray-600">Click to see a special message!</p>
         </div>
       ) : (
-        <div className="text-lg leading-relaxed font-serif text-gray-700 space-y-6">
-          <p>My Dearest Love,</p>
-          <p>
-            From the moment I met you, my life became a symphony of joy,
-            laughter, and endless love. Every day with you feels like a new
-            adventure, and I cherish every second we share.
+        <div className="text-gray-700 text-lg leading-relaxed font-serif">
+          <p>Dear Love,</p>
+          <p className="mt-4">
+            You make my days brighter and my heart fuller. Every moment with you
+            feels like a dream, and I cherish all the memories we’ve created
+            together. I love you more than words can express.
           </p>
-          <p>
-            You are my rock, my best friend, and the most incredible person I
-            know. Thank you for being you, for loving me, and for making my
-            world so beautiful.
-          </p>
-          <p>
-            Always and forever yours,
-            <br />
-            <span className="italic text-pink-600">[Your Name]</span>
-          </p>
+          <p className="mt-6 italic text-pink-500">Forever yours,</p>
+          <p className="text-2xl font-bold mt-2">[Your Name]</p>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default Letter;

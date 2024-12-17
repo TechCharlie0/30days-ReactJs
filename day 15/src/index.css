@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add custom styles if needed */
 body {
-    font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
+  background: linear-gradient(to bottom, #fcbabe, #fad2e1);
 }

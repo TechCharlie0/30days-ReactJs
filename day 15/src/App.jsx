@@ -3,7 +3,7 @@ import Letter from "./components/Letter";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-200 via-rose-100 to-purple-200 flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center bg-pink-100">
       <Letter />
     </div>
   );
