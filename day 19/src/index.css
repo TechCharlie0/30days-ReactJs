@@ -1,11 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  background-color: #f0f4f8;
-  font-family: "Arial", sans-serif;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Firecrackers animation */
+@keyframes burst {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.animate-burst {
+  animation: burst 1s ease-out;
 }
 
-button {
-  font-size: 18px;
+/* Balloons animation */
+@keyframes float {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+.animate-float {
+  animation: float 5s linear infinite;
+}
+
+/* Text Glow Effect */
+.text-glow {
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff0, 0 0 30px #f0f, 0 0 40px #f0f;
+}
+@keyframes float {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float 5s linear infinite;
 }
