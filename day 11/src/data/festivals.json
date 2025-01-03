@@ -1,0 +1,21 @@
+[
+    {
+      "date": "2081-08-20",
+      "festival": "Dashain",
+      "description": "The biggest Hindu festival in Nepal, celebrating family and blessings.",
+      "image": "dashain.jpg"
+    },
+    {
+      "date": "2081-08-22",
+      "festival": "Tihar",
+      "description": "The festival of lights and worship of crows, dogs, and cows.",
+      "image": "tihar.jpg"
+    },
+    {
+      "date": "2081-09-05",
+      "festival": "Chhath",
+      "description": "A festival dedicated to the Sun God, celebrated in the Terai region of Nepal.",
+      "image": "chhath.jpg"
+    }
+  ]
+  

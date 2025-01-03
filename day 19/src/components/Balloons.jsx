@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Balloons = () => {
-  const balloons = Array.from({ length: 10 }, (_, index) => ({
+  const balloons = Array.from({ length: 20 }, () => ({
     left: Math.random() * 100,
+    delay: Math.random() * 5,
     color: `hsl(${Math.random() * 360}, 100%, 70%)`,
   }));
 
@@ -11,14 +12,14 @@ const Balloons = () => {
       {balloons.map((balloon, index) => (
         <div
           key={index}
-          className="absolute animate-float"
+          className="absolute bottom-0 animate-float"
           style={{
             left: `${balloon.left}%`,
-            bottom: '-10%',
-            width: '40px',
-            height: '60px',
-            background: balloon.color,
-            borderRadius: '50%',
+            backgroundColor: balloon.color,
+            width: '50px',
+            height: '70px',
+            borderRadius: '50% 50% 0 0',
+            animationDelay: `${balloon.delay}s`,
           }}
         />
       ))}
