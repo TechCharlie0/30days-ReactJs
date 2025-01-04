@@ -8,10 +8,16 @@ const Calendar = () => {
 
   const monthNames = [
     "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
+    "July", "August", "September", "October", "November", "December",
   ];
 
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  // Example holidays (Add as needed)
+  const holidays = [
+    { date: 1, month: 0 }, // New Year's Day
+    { date: 25, month: 11 }, // Christmas Day
+  ];
 
   // Generate Calendar for a Month
   const createCalendar = (month, year) => {
@@ -31,33 +37,39 @@ const Calendar = () => {
   const renderMonth = (month, year) => {
     const calendarDays = createCalendar(month, year);
     return (
-      <div className="p-4 border rounded shadow-lg bg-white">
-        <h2 className="text-lg font-bold text-center mb-4">
-          {monthNames[month]} {year}
-        </h2>
-        <div className="grid grid-cols-7 gap-2">
+      <div className="calendar-month">
+        <h2 className="month-title">{monthNames[month]} {year}</h2>
+        <div className="days-of-week">
           {daysOfWeek.map((day, index) => (
-            <div key={index} className="text-center font-semibold">
-              {day}
-            </div>
+            <div key={index} className="day-name">{day}</div>
           ))}
-          {calendarDays.map((day, index) => (
-            <div
-              key={index}
-              className={`h-12 w-12 flex items-center justify-center rounded-lg ${
-                day
-                  ? day === todayDate &&
-                    month === currentMonth &&
-                    year === currentYear
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-100 text-black"
-                  : ""
-              } ${day !== null ? "hover:bg-blue-300 cursor-pointer" : ""}`}
-              style={day ? {} : { visibility: "hidden" }}
-            >
-              {day}
-            </div>
-          ))}
+        </div>
+        <div className="days-grid">
+          {calendarDays.map((day, index) => {
+            const isToday =
+              day === todayDate && month === currentMonth && year === currentYear;
+            const isSaturday = day !== null && new Date(year, month, day).getDay() === 6;
+            const isHoliday = holidays.some(
+              (holiday) => holiday.date === day && holiday.month === month
+            );
+
+            return (
+              <div
+                key={index}
+                className={`day-box ${
+                  day
+                    ? isToday
+                      ? "today"
+                      : isHoliday || isSaturday
+                      ? "holiday"
+                      : "default"
+                    : "empty"
+                }`}
+              >
+                {day}
+              </div>
+            );
+          })}
         </div>
       </div>
     );
@@ -68,7 +80,8 @@ const Calendar = () => {
   };
 
   return (
-    <div className="flex flex-wrap gap-6 justify-center bg-gray-50 p-6">
+    <div className="calendar-container">
+      <h1 className="calendar-header">Yearly Calendar - {currentYear}</h1>
       {renderYearCalendar()}
     </div>
   );

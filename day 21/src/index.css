@@ -1,3 +1,170 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #e3f2fd, #f9f9f9);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.calendar-header {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.calendar-month {
+  width: 280px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calendar-month:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.month-title {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.days-of-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.day-name {
+  font-weight: bold;
+  color: #777;
+  font-size: 0.9rem;
+  padding: 5px 0;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day-box {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.day-box.default {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.day-box.default:hover {
+  background: #2196f3;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.day-box.today {
+  background: #4caf50;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.day-box.empty {
+  visibility: hidden;
+}
+.day-box.holiday {
+  background: #ffeb3b;
+  color: #333;
+  font-weight: bold;
+}
+
+.day-box.holiday:hover {
+  background: #ffd740;
+}
+
+@media (max-width: 768px) {
+  .calendar-month {
+    width: 100%;
+  }
+
+  .calendar-container {
+    gap: 10px;
+  }
+}
