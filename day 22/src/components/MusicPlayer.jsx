@@ -11,21 +11,21 @@ const MusicPlayer = () => {
       title: "Antim Maya",
       artist: "Naren Limbu",
       src: "/assets/songs/antim-maya.mp3",
-      albumArt: "/assets/images/album1.jpg",
+      albumArt: "/assets/images/antim maya.jpg",
     },
     {
       id: 2,
       title: "Samjhiney Mutu",
       artist: "The Edge Band",
       src: "/assets/songs/samjhiney-mutu.mp3",
-      albumArt: "/assets/images/album2.jpg",
+      albumArt: "/assets/images/rob.jpg",
     },
     {
       id: 3,
       title: "Timi Sanga",
       artist: "Sanjana Shrestha",
       src: "/assets/songs/timi-sanga.mp3",
-      albumArt: "/assets/images/album3.jpg",
+      albumArt: "/assets/images/samjiney mutu.jpg",
     },
   ];
 
