@@ -1,28 +1,22 @@
-import React from "react";
+import React from 'react';
 
-const Controls = ({ isPlaying, onPlayPause, onNext, onPrev }) => {
+const Control = ({ play, pause, next, prev }) => {
   return (
-    <div className="flex justify-center items-center gap-4 mt-6">
-      <button
-        onClick={onPrev}
-        className="p-2 bg-purple-800 rounded-full hover:bg-purple-700"
-      >
-        ⏮️
+    <div className="flex items-center justify-center space-x-6">
+      <button onClick={prev} className="text-white bg-gray-800 p-2 rounded-full hover:bg-gray-700">
+        Prev
       </button>
-      <button
-        onClick={onPlayPause}
-        className="p-4 bg-purple-700 rounded-full hover:bg-purple-600"
-      >
-        {isPlaying ? "⏸️" : "▶️"}
+      <button onClick={play} className="text-white bg-blue-500 p-4 rounded-full hover:bg-blue-400">
+        Play
       </button>
-      <button
-        onClick={onNext}
-        className="p-2 bg-purple-800 rounded-full hover:bg-purple-700"
-      >
-        ⏭️
+      <button onClick={pause} className="text-white bg-red-500 p-4 rounded-full hover:bg-red-400">
+        Pause
+      </button>
+      <button onClick={next} className="text-white bg-gray-800 p-2 rounded-full hover:bg-gray-700">
+        Next
       </button>
     </div>
   );
 };
 
-export default Controls;
+export default Control;
