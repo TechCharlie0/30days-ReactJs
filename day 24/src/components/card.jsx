@@ -7,7 +7,13 @@ const Card = ({ title, description }) => {
 
       {/* Icon or Avatar */}
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-tr from-pink-500 to-purple-500 text-white shadow-md">
-       
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M12 18h.01M6.93 6.93l1.41 1.41M17.66 17.66l1.41 1.41M3 12h3m12 0h3M6.34 17.66l1.41-1.41M17.07 6.93l1.41-1.41" />
         </svg>
       </div>
@@ -17,11 +23,11 @@ const Card = ({ title, description }) => {
       </h2>
       <p className="mt-2 text-gray-600">{description}</p>
 
-      {/* Call to action */ }
-  <button className="mt-4 inline-block rounded-md bg-purple-500 px-4 py-2 text-white transition hover:bg-purple-600">
-    Learn More
-  </button>
-    </div >
+      {/* Call to action */}
+      <button className="mt-4 inline-block rounded-md bg-purple-500 px-4 py-2 text-white transition hover:bg-purple-600">
+        Learn More
+      </button>
+    </div>
   );
 };
 
